@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        {% for cao in caos %}
+            <a href="{% url 'update_cao' cao.id %}">
+                <li> {{ cao.nome }}</li>
+            </a>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_cao' %}">Novo Cão</a>
+</body>
+</html>
